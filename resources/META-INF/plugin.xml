@@ -24,6 +24,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
+    <fileTypeFactory implementation="org.snlab.YangFileTypeFactory" />
   </extensions>
 
   <actions>
