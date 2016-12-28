@@ -25,6 +25,8 @@
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <fileTypeFactory implementation="org.snlab.YangFileTypeFactory" />
+    <lang.parserDefinition language="Yang" implementationClass="org.snlab.YangParserDefinition" />
+    <lang.syntaxHighlighterFactory key="Yang" implementationClass="org.snlab.YangSyntaxHighlighterFactory" />
   </extensions>
 
   <actions>
