@@ -27,6 +27,7 @@
     <fileTypeFactory implementation="org.snlab.YangFileTypeFactory" />
     <lang.parserDefinition language="Yang" implementationClass="org.snlab.YangParserDefinition" />
     <lang.syntaxHighlighterFactory key="Yang" implementationClass="org.snlab.YangSyntaxHighlighterFactory" />
+    <colorSettingsPage implementation="org.snlab.YangColorSettingsPage" />
   </extensions>
 
   <actions>
