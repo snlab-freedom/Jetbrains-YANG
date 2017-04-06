@@ -3,11 +3,14 @@ jdk: oraclejdk8
 script: mvn -B clean package
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: AthAY4avCi/+kYkzUVbVpTMfJ35qQgi88poEelHxMAUc+46FYjG/Sz3LOStj1s6gV3RMoTHtezbjlC7qg818+h2/2mqAjC/sKv5WKmr5vZAHX71eSyHDQQF4ceuwN4eMIDNMdmwJ68OsEOoOn5EU8Ay/V+bTFOAI/mFcA+hJsMYbmYIWFjzVYbHCGfl1sbUgaqH65KKR71mH1IOrrCGwFFhIe+c5/GatiA4vJ0dQPALWDjuwt3hidjqmTVGl59sgvVDOyIhlBzCkmbQeNre835bpBwjJUKLSHUg8rwZETh7v9n9IZ4gr+4pL0A0NIuNC0s6xsbanCtnJFL0T9N3H7PEYF1XuVuFmm/Rs8PZBeAasUoKIjhSQxEhi24pdrvYP6/nz+vxxG0fja0m+dhn+4twye3uN/S54SkE1x50puigFrAoQW8tzOd2GFMeZlrBF95vaZWCk88fF5TdADqNiL2GfxmirO4/ouuiSbm5oqW4vDjdukvBcr7dY3lU99fZQeCTJIz9ZzPXbnY+WOLRE+/RT0Wcg76dpAn+Y2cYwqws/27sxA0SKouwUqsfFWfE93X24UcAWSZnD1p9e/HzLFpmNk534VoILi5b9sCJoEPgEsWW6Rk5uZfnWEwU/GAbXwz73tcnCwqNuapJZq3IkK+bUiXGFuWPNkdC8SMTe46k=
   file: "$CI_HOME/target/YANG-IntelliJ-Plugin.jar"
   on:
     repo: snlab-freedom/Jetbrains-YANG
+    tags: true
+    all_branches: true
 env:
   global:
   - GH_PROJECT_NAME: YANG-IntelliJ-Plugin
